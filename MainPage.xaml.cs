@@ -27,7 +27,7 @@ namespace HabitTracker
             LoadHabits();
         }
 
-        // Feature branch: Load habits for display
+        // Load habits from database for display
         private async void LoadHabits()
         {
             var habits = await _databaseService.GetHabitsAsync();
