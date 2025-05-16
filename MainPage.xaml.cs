@@ -35,6 +35,7 @@ namespace HabitTracker
                 return;
             }
 
+            var NameLenght = HabitNameEntry.Text.Trim().Length;
             var habit = new Habit
             {
                 Name = HabitNameEntry.Text.Trim(),
