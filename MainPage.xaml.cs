@@ -1,18 +1,35 @@
 ﻿using HabitTracker.Models;
 using HabitTracker.Services;
-using Microsoft.Maui.Controls;
-using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace HabitTracker
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
         private readonly DatabaseService _databaseService;
-
+        private ObservableCollection<Habit> _habits;
+        public ObservableCollection<Habit> Habits
+        {
+            get => _habits;
+            set
+            {
+                _habits = value;
+                OnPropertyChanged();
+            }
+        }
         public MainPage()
         {
             InitializeComponent();
             _databaseService = new DatabaseService();
+            BindingContext = this;
+            LoadHabits();
+        }
+        private async void LoadHabits()
+        {
+            var habits = await _databaseService.GetHabitsAsync();
+            Habits = new ObservableCollection<Habit>(habits);
         }
 
         private async void OnAddHabitClicked(object sender, EventArgs e)
@@ -46,6 +63,12 @@ namespace HabitTracker
             await DisplayAlert("Success", "Habit added successfully", "OK");
             HabitNameEntry.Text = string.Empty;
             FrequencyPicker.SelectedIndex = -1;
+            LoadHabits();
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
