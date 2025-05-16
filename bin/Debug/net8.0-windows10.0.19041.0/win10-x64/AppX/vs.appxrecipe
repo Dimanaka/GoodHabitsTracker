@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-16T10:11:51.376</Modified>
+      <Modified>2025-05-16T09:45:22.351</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-05-16T09:59:06.884</Modified>
+      <Modified>2025-05-16T09:45:22.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\HabitsTracker.runtimeconfig.json">
       <PackagePath>HabitsTracker.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\HabitsTracker.dll">
       <PackagePath>HabitsTracker.dll</PackagePath>
-      <Modified>2025-05-16T10:11:50.947</Modified>
+      <Modified>2025-05-16T09:45:21.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>HabitsTracker.exe</PackagePath>
-      <Modified>2025-05-16T10:11:50.954</Modified>
+      <Modified>2025-05-16T09:45:21.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\HabitsTracker\HabitsTracker\HabitsTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\HabitsTracker.deps.json">
       <PackagePath>HabitsTracker.deps.json</PackagePath>
-      <Modified>2025-05-16T09:59:06.593</Modified>
+      <Modified>2025-05-16T09:45:22.087</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dimas\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
