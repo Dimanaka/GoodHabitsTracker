@@ -26,6 +26,8 @@ namespace HabitTracker
             BindingContext = this;
             LoadHabits();
         }
+
+        // Feature branch: Load habits for display
         private async void LoadHabits()
         {
             var habits = await _databaseService.GetHabitsAsync();
