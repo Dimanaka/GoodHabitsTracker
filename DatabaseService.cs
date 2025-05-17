@@ -26,5 +26,11 @@ namespace HabitTracker.Services
         {
             return _database.Table<Habit>().ToListAsync();
         }
+
+        public Task<int> DeleteHabitAsync(Habit habit)
+        {
+            return _database.DeleteAsync(habit);
+        }
+
     }
 }

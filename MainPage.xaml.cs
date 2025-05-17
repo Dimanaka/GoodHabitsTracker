@@ -67,6 +67,19 @@ namespace HabitTracker
             FrequencyPicker.SelectedIndex = -1;
             LoadHabits();
         }
+        private async void OnDeleteHabitClicked(object sender, EventArgs e)
+        {
+            if (sender is Button button && button.CommandParameter is Habit habit)
+            {
+                var confirm = await DisplayAlert("Confirm", $"Delete habit '{habit.Name}'?", "Yes", "No");
+                if (confirm)
+                {
+                    await _databaseService.DeleteHabitAsync(habit);
+                    LoadHabits();
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
