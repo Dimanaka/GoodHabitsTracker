@@ -17,10 +17,13 @@
         <CollectionView x:Name="HabitsListView" ItemsSource="{Binding Habits}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10">
-                        <Label Text="{Binding Name}" FontSize="16" />
-                        <Label Text="{Binding Frequency}" FontSize="14" TextColor="Gray" />
-                        <Label Text="{Binding CreatedDate, StringFormat='Created: {0:d}'}" FontSize="12" TextColor="Gray" />
+                    <StackLayout Padding="10" Orientation="Horizontal">
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontSize="16" />
+                            <Label Text="{Binding Frequency}" FontSize="14" TextColor="Gray" />
+                            <Label Text="{Binding CreatedDate, StringFormat='Created: {0:d}'}" FontSize="12" TextColor="Gray" />
+                        </StackLayout>
+                        <Button Text="Delete" Clicked="OnDeleteHabitClicked" CommandParameter="{Binding .}" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
