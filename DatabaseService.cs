@@ -16,6 +16,11 @@ namespace HabitTracker.Services
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Habit>().Wait();
         }
+        public DatabaseService(string dbPath)
+        {
+            _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Habit>().Wait();
+        }
 
         public Task<int> AddHabitAsync(Habit habit)
         {
