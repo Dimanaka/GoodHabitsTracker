@@ -21,10 +21,20 @@ namespace HabitTracker.Services
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Habit>().Wait();
         }
-
+      
         public Task<int> AddHabitAsync(Habit habit)
         {
-            return _database.InsertAsync(habit);
+            if (string.IsNullOrWhiteSpace(habit.Name))
+            {
+                throw new ArgumentException("Habit name cannot be empty", nameof(habit.Name));
+            }
+            if (habit.Name.Length > 50)
+            {
+                throw new ArgumentException("Habit name cannot exceed 50 characters", nameof(habit.Name));
+            }
+          
+            habit.CreatedDate = DateTime.Now;
+            return _database.InsertAsync(habit); 
         }
 
         public Task<List<Habit>> GetHabitsAsync()
@@ -36,6 +46,14 @@ namespace HabitTracker.Services
         {
             return _database.DeleteAsync(habit);
         }
+        public SQLiteAsyncConnection GetConnection()
+        {
+            return _database;
+        }
 
+        public async Task CloseConnectionAsync()
+        {
+            await _database.CloseAsync();
+        }
     }
 }
