@@ -55,5 +55,9 @@ namespace HabitTracker.Services
             await _database.CloseAsync();
         }
 
+        public async Task CloseConnectionAsync()
+        {
+            await _database.CloseAsync();
+        }
     }
 }
