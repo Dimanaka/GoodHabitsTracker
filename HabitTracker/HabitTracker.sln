@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitTracker", "HabitTracker.csproj", "{C01D0D79-4B37-4633-966E-8A43DBBD80CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitTracker.Test", "..\HabitTracker.Test\HabitTracker.Test.csproj", "{CFD6B28C-CD6C-4B97-B813-ED0745F0D098}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C01D0D79-4B37-4633-966E-8A43DBBD80CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C01D0D79-4B37-4633-966E-8A43DBBD80CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C01D0D79-4B37-4633-966E-8A43DBBD80CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C01D0D79-4B37-4633-966E-8A43DBBD80CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C01D0D79-4B37-4633-966E-8A43DBBD80CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C01D0D79-4B37-4633-966E-8A43DBBD80CF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CFD6B28C-CD6C-4B97-B813-ED0745F0D098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD6B28C-CD6C-4B97-B813-ED0745F0D098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD6B28C-CD6C-4B97-B813-ED0745F0D098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD6B28C-CD6C-4B97-B813-ED0745F0D098}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F2FA8AD-90BC-40F8-A56C-4FE4CB9041DF}
+	EndGlobalSection
+EndGlobal
