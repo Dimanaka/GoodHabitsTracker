@@ -18,10 +18,7 @@ jobs:
       run: |
         dotnet restore HabitTracker/HabitTracker.sln --no-cache
         dotnet restore HabitTracker/HabitTracker.csproj -r win-x64
-        dotnet restore HabitTracker/HabitTracker.csproj -r android-arm
         dotnet restore HabitTracker/HabitTracker.csproj -r android-arm64
-        dotnet restore HabitTracker/HabitTracker.csproj -r android-x64
-        dotnet restore HabitTracker/HabitTracker.csproj -r android-x86
     - name: Build solution
       run: dotnet build HabitTracker/HabitTracker.sln --configuration Release --no-restore
     - name: Run unit tests
