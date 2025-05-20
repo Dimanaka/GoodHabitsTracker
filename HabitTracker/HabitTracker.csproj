@@ -40,7 +40,7 @@
         <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     </PropertyGroup>
     <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
-        <RuntimeIdentifiers>android-arm;android-arm64;android-x64;android-x86</RuntimeIdentifiers>
+        <RuntimeIdentifiers>android-arm64</RuntimeIdentifiers>
     </PropertyGroup>
 
 	<ItemGroup>
