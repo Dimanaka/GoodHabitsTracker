@@ -37,7 +37,8 @@ namespace HabitTracker
 
         private async void OnAddHabitClicked(object sender, EventArgs e)
         {
-
+            // Sentry error tracking testing
+            SentrySdk.CaptureMessage("Habit added successfully");
 
             if (string.IsNullOrWhiteSpace(HabitNameEntry.Text?.Trim()))
             {
