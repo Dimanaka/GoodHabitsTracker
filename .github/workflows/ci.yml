@@ -22,9 +22,9 @@ jobs:
     - name: Build solution
       run: dotnet build HabitTracker/HabitTracker.sln --configuration Release --no-restore
     - name: Run unit tests
-      run: dotnet test HabitTracker.Test/HabitTracker.Test.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage"
+      run: dotnet test HabitTracker.Test/HabitTracker.Test.csproj --configuration Release --verbosity normal --collect:"XPlat Code Coverage"
     - name: Upload coverage report
       uses: codecov/codecov-action@v3
       with:
-        files: ./HabitsTracker.Test/TestResults/*/coverage.cobertura.xml
+        files: ./HabitTracker.Test/TestResults/*/coverage.cobertura.xml
         fail_ci_if_error: true
