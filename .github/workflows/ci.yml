@@ -17,7 +17,7 @@ jobs:
     - name: Restore dependencies
       run: |
         dotnet restore HabitTracker/HabitTracker.sln --no-cache
-        dotnet restore HabitTracker/HabitTracker.csproj -r win10-x64
+        dotnet restore HabitTracker/HabitTracker.csproj -r win-x64
         dotnet restore HabitTracker/HabitTracker.csproj -r android-arm
         dotnet restore HabitTracker/HabitTracker.csproj -r android-arm64
         dotnet restore HabitTracker/HabitTracker.csproj -r android-x64
