@@ -1,0 +1,23 @@
+name: CD Pipeline
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+    - name: Restore dependencies
+      run: dotnet restore HabitTracker/HabitTracker.sln
+    - name: Build Android app
+      run: dotnet publish HabitTracker/HabitTracker.csproj -f net8.0-android -c Release -o ./publish/android
+    - name: Upload Android artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: habits-tracker-android
+        path: ./publish/android/*.apk
