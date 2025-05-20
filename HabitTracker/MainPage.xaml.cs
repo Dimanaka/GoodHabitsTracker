@@ -19,6 +19,7 @@ namespace HabitTracker
                 OnPropertyChanged();
             }
         }
+
         public MainPage()
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace HabitTracker
 
         private async void OnAddHabitClicked(object sender, EventArgs e)
         {
+
+
             if (string.IsNullOrWhiteSpace(HabitNameEntry.Text?.Trim()))
             {
                 await DisplayAlert("Error", "Please enter a habit name", "OK");
